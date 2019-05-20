@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxiFarePrediction", "TaxiF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HousePrice1", "HousePrice1\HousePrice1.csproj", "{ADBAAE0C-4408-4106-9876-B496B421A075}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubIssueClassification", "GitHubIssueClassification\GitHubIssueClassification.csproj", "{F5D1B895-6CC8-4582-B673-A82C484E38D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{ADBAAE0C-4408-4106-9876-B496B421A075}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADBAAE0C-4408-4106-9876-B496B421A075}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADBAAE0C-4408-4106-9876-B496B421A075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5D1B895-6CC8-4582-B673-A82C484E38D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5D1B895-6CC8-4582-B673-A82C484E38D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5D1B895-6CC8-4582-B673-A82C484E38D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5D1B895-6CC8-4582-B673-A82C484E38D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
