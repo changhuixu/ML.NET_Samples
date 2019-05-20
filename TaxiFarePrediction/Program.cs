@@ -11,12 +11,10 @@ namespace TaxiFarePrediction
     class Program
     {
         private static string BinPath => new FileInfo(typeof(Program).Assembly.Location).Directory?.FullName ?? string.Empty;
-        private static string DatasetsPath = Path.Combine(BinPath, @"Data");
-        private static string TrainingDataFile = Path.Combine(DatasetsPath, @"taxi-fare-train.csv");
-        private static string TestingDataFile = Path.Combine(DatasetsPath, @"taxi-fare-test.csv");
-        private static string ModelsPath = Path.Combine(BinPath, @"MLModels");
-        private static string ModelFile = Path.Combine(ModelsPath, @"TaxiFareModel.zip");
-
+        private static readonly string DatasetsPath = Path.Combine(BinPath, @"Data");
+        private static readonly string TrainingDataFile = Path.Combine(DatasetsPath, @"taxi-fare-train.csv");
+        private static readonly string TestingDataFile = Path.Combine(DatasetsPath, @"taxi-fare-test.csv");
+        private static readonly string ModelFile = Path.Combine(BinPath, @"TaxiFareModel.zip");
 
         static void Main(string[] args)
         {
@@ -30,7 +28,7 @@ namespace TaxiFarePrediction
             TestSinglePrediction(mlContext);
 
             // Paint regression distribution chart for a number of elements read from a Test DataSet file
-            ChartPloter.PlotRegressionChart(mlContext, ModelsPath, TestingDataFile, 100);
+            ChartPloter.PlotRegressionChart(mlContext, ModelFile, TestingDataFile, 100);
 
             Console.WriteLine("Press any key to exit..");
             Console.ReadLine();
@@ -82,9 +80,9 @@ namespace TaxiFarePrediction
             ConsoleHelper.PrintRegressionMetrics(trainer.ToString(), metrics);
 
             // STEP 6: Save/persist the trained model to a .ZIP file
-            mlContext.Model.Save(trainedModel, trainingDataView.Schema, ModelsPath);
+            mlContext.Model.Save(trainedModel, trainingDataView.Schema, ModelFile);
 
-            Console.WriteLine("The model is saved to {0}", ModelsPath);
+            Console.WriteLine("The model is saved to {0}", ModelFile);
 
             return trainedModel;
         }
@@ -107,7 +105,7 @@ namespace TaxiFarePrediction
             };
 
             ///
-            ITransformer trainedModel = mlContext.Model.Load(ModelsPath, out var modelInputSchema);
+            ITransformer trainedModel = mlContext.Model.Load(ModelFile, out var modelInputSchema);
 
             // Create prediction engine related to the loaded trained model
             var predEngine = mlContext.Model.CreatePredictionEngine<TaxiTrip, PredictedTaxiFare>(trainedModel);
