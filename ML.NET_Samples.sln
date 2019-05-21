@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HousePrice1", "HousePrice1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubIssueClassification", "GitHubIssueClassification\GitHubIssueClassification.csproj", "{F5D1B895-6CC8-4582-B673-A82C484E38D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IrisFlowerClustering", "IrisFlowerClustering\IrisFlowerClustering.csproj", "{83DA1273-F84A-43AB-BE4E-E5B5FF84E6CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F5D1B895-6CC8-4582-B673-A82C484E38D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5D1B895-6CC8-4582-B673-A82C484E38D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5D1B895-6CC8-4582-B673-A82C484E38D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83DA1273-F84A-43AB-BE4E-E5B5FF84E6CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83DA1273-F84A-43AB-BE4E-E5B5FF84E6CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83DA1273-F84A-43AB-BE4E-E5B5FF84E6CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83DA1273-F84A-43AB-BE4E-E5B5FF84E6CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
